@@ -1,17 +1,16 @@
-import { View, Text, StatusBar, StyleSheet } from "react-native";
+import Tabs from "./src/Tabs";
+import { View, StyleSheet } from "react-native";
 
-export default function App() {
+export default function MyTabs() {
   return (
-    <View style={style.container}>
-      <Text>teste</Text>
-      <StatusBar backgroundColor={"#fff"} />
+    <View style={styles.conteiner}>
+      <Tabs />
     </View>
   );
 }
 
-const style = StyleSheet.create({
-  container: {
+const styles = StyleSheet.create({
+  conteiner: {
     flex: 1,
-    padding: 10
-  }
-})
+  },
+});
