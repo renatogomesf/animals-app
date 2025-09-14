@@ -20,13 +20,27 @@ const animais = [
 export default function Home() {
   return (
     <View style={styles.conteiner}>
+
       <View style={styles.top}>
         <View style={styles.imgItem}>
           <Text>SP</Text>
         </View>
         <Text>Sargento prata</Text>
       </View>
-      <TextInput style={styles.searchInput} placeholder="Pesquise aqui..." />
+
+      <View style={styles.search}>
+        <View style={styles.searchInput}>
+          <Feather
+            style={{ marginLeft: 10 }}
+            name="search"
+            size={24}
+            color="black"
+          />
+          <TextInput placeholder="Pesquise aqui..." />
+        </View>
+        <Feather name="filter" size={24} color="black" />
+      </View>
+
       <FlatList
         style={styles.flatList}
         data={animais}
@@ -56,26 +70,39 @@ const styles = StyleSheet.create({
     flex: 1,
     // alignItems: "center",
     // justifyContent: "center",
-    // backgroundColor: "#966464",
+    // backgroundColor: "#fff",
+    padding: 10
   },
-  top:{
-    flexDirection: 'row',
-    alignItems: 'center',
+  top: {
+    flexDirection: "row",
+    alignItems: "center",
     gap: 10,
     width: "90%",
     margin: "auto",
-    marginTop: 10
+    // marginTop: 10,
+  },
+  search: {
+    width: '90%',
+    // maxWidth: '100%',
+    margin: 'auto',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 10
   },
   searchInput: {
-    borderWidth: 1,
-    width: "90%",
-    margin: "auto",
+    // borderWidth: 1,
+    width: "85%",
+    // margin: "auto",
     borderRadius: 10,
     marginTop: 10,
     marginBottom: 10,
     zIndex: 10,
     backgroundColor: "#fff",
     padding: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 15,
   },
   flatList: {
     marginBottom: 10,
@@ -85,11 +112,11 @@ const styles = StyleSheet.create({
     // height: 70,
     margin: "auto",
     flexDirection: "row",
-    borderWidth: 1,
+    // borderWidth: 1,
     padding: 10,
     paddingRight: 20,
     marginTop: 10,
-    boxShadow: "0px 0px 10px #00000050",
+    // boxShadow: "0px 0px 10px #00000050",
     borderRadius: 20,
     alignItems: "center",
     justifyContent: "space-between",
