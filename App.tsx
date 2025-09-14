@@ -1,11 +1,15 @@
+import { SafeAreaView } from "react-native-safe-area-context";
 import Tabs from "./src/Tabs";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, StatusBar } from "react-native";
 
 export default function MyTabs() {
   return (
-    <View style={styles.conteiner}>
-      <Tabs />
-    </View>
+    <SafeAreaView style={styles.conteiner}>
+      <View style={styles.conteiner}>
+        <Tabs />
+      </View>
+      <StatusBar backgroundColor={"#fff"} />
+    </SafeAreaView>
   );
 }
 

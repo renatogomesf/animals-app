@@ -20,11 +20,11 @@ export default function Routes() {
         tabBarStyle: {
           backgroundColor: "#334050",
           borderTopWidth: 0, // tira a borda de cima da barra de navegação
-          bottom: 60,
-          width: 370,
+          bottom: 0,
+          // width: "90%",
           height: 60,
-          margin: "auto",
-          borderRadius: 30,
+          // margin: "auto",
+          // borderRadius: 30,
         },
         tabBarIconStyle: {
           // borderColor: "#fff",
@@ -32,8 +32,9 @@ export default function Routes() {
           // width: 50,
           // height: 50,
           top: 10,
-          borderRadius: 30,
+          // borderRadius: 30,
         },
+        tabBarHideOnKeyboard: true
       }}
     >
       <Tab.Screen
